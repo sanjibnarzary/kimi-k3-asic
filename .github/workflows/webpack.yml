@@ -1,0 +1,41 @@
+name: Deploy Static Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Change to 'master' if your default branch is master
+
+# Grant permissions required to deploy to GitHub Pages
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Download your repository code onto the runner
+      - name: Checkout Code 🛎️
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js environment
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      # 3. Clean install your dependencies
+      - name: Install Dependencies 🔧
+        run: npm ci
+
+      # 4. Compile the application into static files (Instead of npm run dev!)
+      - name: Build Project 🏗️
+        run: npm run build
+
+      # 5. Push the compiled files to GitHub Pages
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # Change to 'build' if using Create React App instead of Vite
+          branch: gh-pages # The branch the action will deploy to
