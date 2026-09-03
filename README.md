@@ -76,8 +76,8 @@ The **Kimi K3 On-Silicon ASIC EDA Suite** models a monolithic 3D semiconductor a
 ### Installation
 ```bash
 # Clone or open the repository
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/sanjibnarzary/kimi-k3-asic.git
+cd kimi-k3-asic
 
 # Install dependencies
 npm install
