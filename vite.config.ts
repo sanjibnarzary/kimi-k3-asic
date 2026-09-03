@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: "/kimi-k3-asic/",
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
