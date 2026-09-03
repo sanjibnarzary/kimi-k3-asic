@@ -1,0 +1,6 @@
+{
+  "name": "Kimi K3 On-Silicon ASIC EDA Suite",
+  "description": "Electronic Design Automation (EDA) suite for single-chip ASICs integrating all pretrained Kimi K3 weights directly on silicon with PCIe Gen 5/CXL interfaces, 3D memory stacking, thermal simulation, and zero-DRAM edge inference.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    background-color: #050608;
+    color: #D1D5DB;
+  }
+}
+
+.geometric-grid-dots {
+  background-image: radial-gradient(#3b82f6 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.geometric-circuit-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
